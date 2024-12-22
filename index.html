@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Helldivers 2 Stratagem Practice</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Helldivers 2 Stratagem Practice</h1>
+        <div class="stratagem-select">
+            <h2>Select Stratagems to Practice</h2>
+            <div id="stratagemList" class="stratagem-list"></div>
+            <div class="select-controls">
+                <button id="selectAll">Select All</button>
+                <button id="deselectAll">Deselect All</button>
+            </div>
+        </div>
+        <div class="game-area">
+            <div class="stratagem-display">
+                <h2>Current Stratagem:</h2>
+                <div id="stratagemName">Ready!</div>
+                <div id="sequence"></div>
+            </div>
+            <div class="input-display">
+                <div id="userInput"></div>
+            </div>
+            <div class="score">
+                <span>Correct: <span id="correctCount">0</span></span>
+                <span>Wrong: <span id="wrongCount">0</span></span>
+            </div>
+            <button id="startButton">Start Practice</button>
+        </div>
+        <div id="gamepadStatus" class="gamepad-status">
+            Controller Status: Not Connected
+        </div>
+        <button id="reconnectController" class="gamepad-button">Reconnect Controller</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 
