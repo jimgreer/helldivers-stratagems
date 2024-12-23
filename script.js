@@ -82,7 +82,7 @@ const stratagems = [
             { name: "Supply Pack", sequence: "⬇️⬅️⬇️⬆️⬆️⬇️", selected: true },
             { name: "Jump Pack", sequence: "⬆️⬆️⬇️⬆️⬆️", selected: true },
             { name: "Ballistic Shield", sequence: "⬇️⬇️⬇️⬆️⬆️⬅️", selected: true },
-            { name: "Directional Shield", sequence: "⬆️⬅️⬅️���️⬆️⬆️", selected: true },
+            { name: "Directional Shield", sequence: "⬆️⬅️⬅️⬅️⬆️⬆️", selected: true },
             { name: "Shield Generator Pack", sequence: "⬆️⬅️⬅️➡️➡️", selected: true },
             { name: "AR-23 Guard Dog", sequence: "⬆️⬆️➡️⬆️⬆️", selected: true },
             { name: "LAS-5 Guard Dog", sequence: "⬆️⬆️➡️➡️", selected: true },
@@ -126,6 +126,9 @@ const selectAllBtn = document.getElementById('selectAll');
 const deselectAllBtn = document.getElementById('deselectAll');
 const gamepadStatusDisplay = document.getElementById("gamepadStatus");
 const reconnectButton = document.getElementById("reconnectController");
+
+const clickSound = new Audio('sounds/click.mp3');
+clickSound.volume = 1.0; // Changed from 0.3 to 1.0
 
 function createStratagemList() {
     let html = '';
@@ -246,6 +249,8 @@ function setupGamepad() {
             if (direction && !lastDirection) {
                 userSequence += direction;
                 userInputDisplay.textContent = userSequence;
+                clickSound.currentTime = 0; // Reset sound to start
+                clickSound.play();
                 checkSequence();
             }
             lastDirection = direction;
@@ -276,6 +281,8 @@ document.addEventListener("keydown", (event) => {
         userSequence += direction;
         userInputDisplay.textContent = userSequence;
         checkSequence();
+        clickSound.currentTime = 0; // Reset sound to start
+        clickSound.play();
     }
 });
 
