@@ -129,9 +129,6 @@ const gamepadStatusDisplay = document.getElementById("gamepadStatus");
 const reconnectButton = document.getElementById("reconnectController");
 const blindModeCheckbox = document.getElementById("blindMode");
 
-const clickSound = new Audio('sounds/click.mp3');
-clickSound.volume = 1.0; // Changed from 0.3 to 1.0
-
 function createStratagemList() {
     let html = '';
     let stratagemIndex = 0;
@@ -253,8 +250,6 @@ function setupGamepad() {
             if (direction && !lastDirection) {
                 userSequence += direction;
                 userInputDisplay.textContent = userSequence;
-                clickSound.currentTime = 0; // Reset sound to start
-                clickSound.play();
                 checkSequence();
             }
             lastDirection = direction;
@@ -285,8 +280,6 @@ document.addEventListener("keydown", (event) => {
         userSequence += direction;
         userInputDisplay.textContent = userSequence;
         checkSequence();
-        clickSound.currentTime = 0; // Reset sound to start
-        clickSound.play();
     }
 });
 
