@@ -114,6 +114,7 @@ let gamepadConnected = false;
 let gamepadCheckInterval;
 let lastDirection = "";
 let isBlindMode = false;
+let stratagemStats = {};
 
 const sequenceDisplay = document.getElementById("sequence");
 const userInputDisplay = document.getElementById("userInput");
@@ -128,6 +129,38 @@ const deselectAllBtn = document.getElementById('deselectAll');
 const gamepadStatusDisplay = document.getElementById("gamepadStatus");
 const reconnectButton = document.getElementById("reconnectController");
 const blindModeCheckbox = document.getElementById("blindMode");
+
+// Add tracking for each stratagem's performance
+function initializeStratagemStats() {
+    const stats = localStorage.getItem('stratagemStats');
+    if (stats) return JSON.parse(stats);
+
+    // Initialize with default values
+    const allStats = {};
+    stratagems.forEach(category => {
+        category.items.forEach(stratagem => {
+            allStats[stratagem.name] = {
+                correctCount: 0,
+                wrongCount: 0,
+                lastPracticed: null,
+                errorRate: 0
+            };
+        });
+    });
+    return allStats;
+}
+
+// Initialize stats when loading
+function loadSettings() {
+    loadSelections();
+    stratagemStats = initializeStratagemStats();
+    
+    const savedBlindMode = localStorage.getItem('blindMode');
+    if (savedBlindMode !== null) {
+        isBlindMode = savedBlindMode === 'true';
+        blindModeCheckbox.checked = isBlindMode;
+    }
+}
 
 function createStratagemList() {
     let html = '';
@@ -168,6 +201,7 @@ function getAllStratagems() {
     return allStratagems;
 }
 
+// Modify selectRandomStratagem to use weighted selection
 function selectRandomStratagem() {
     const allStratagems = getAllStratagems();
     const selectedStratagems = allStratagems.filter(s => s.selected);
@@ -175,8 +209,32 @@ function selectRandomStratagem() {
         alert('Please select at least one stratagem to practice!');
         return false;
     }
-    currentStratagem = selectedStratagems[Math.floor(Math.random() * selectedStratagems.length)];
+
+    // Calculate weights based on error rate and time since last practice
+    const now = Date.now();
+    const weights = selectedStratagems.map(stratagem => {
+        const stats = stratagemStats[stratagem.name];
+        const daysSinceLastPractice = stats.lastPracticed ? 
+            (now - stats.lastPracticed) / (1000 * 60 * 60 * 24) : 7;
+        
+        // Higher weight for:
+        // 1. Higher error rates
+        // 2. Stratagems not practiced recently
+        return (stats.errorRate + 0.1) * Math.min(daysSinceLastPractice, 7);
+    });
+
+    // Weighted random selection
+    const totalWeight = weights.reduce((a, b) => a + b, 0);
+    let random = Math.random() * totalWeight;
     
+    for (let i = 0; i < weights.length; i++) {
+        random -= weights[i];
+        if (random <= 0) {
+            currentStratagem = selectedStratagems[i];
+            break;
+        }
+    }
+
     stratagemNameDisplay.textContent = currentStratagem.name;
     
     if (isBlindMode) {
@@ -194,9 +252,14 @@ function selectRandomStratagem() {
     return true;
 }
 
+// Update stats when checking sequence
 function checkSequence() {
+    const stats = stratagemStats[currentStratagem.name];
+    stats.lastPracticed = Date.now();
+
     if (userSequence === currentStratagem.sequence) {
         correctCount++;
+        stats.correctCount++;
         correctCountDisplay.textContent = correctCount;
         sequenceDisplay.textContent = "✅ CORRECT!";
         setTimeout(() => {
@@ -204,6 +267,7 @@ function checkSequence() {
         }, 1000);
     } else if (userSequence.length >= currentStratagem.sequence.length) {
         wrongCount++;
+        stats.wrongCount++;
         wrongCountDisplay.textContent = wrongCount;
         userSequence = "";
         userInputDisplay.textContent = "";
@@ -217,6 +281,13 @@ function checkSequence() {
             }, 2000);
         }, 1000);
     }
+
+    // Update error rate
+    const total = stats.correctCount + stats.wrongCount;
+    stats.errorRate = total > 0 ? stats.wrongCount / total : 0;
+    
+    // Save stats
+    localStorage.setItem('stratagemStats', JSON.stringify(stratagemStats));
 }
 
 function setupGamepad() {
@@ -398,6 +469,6 @@ blindModeCheckbox.addEventListener('change', (e) => {
     localStorage.setItem('blindMode', isBlindMode);
 });
 
-loadSelections();
+loadSettings();
 createStratagemList();
 setTimeout(checkInitialGamepadState, 1000);
