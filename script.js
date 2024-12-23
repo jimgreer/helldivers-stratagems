@@ -170,6 +170,12 @@ function createStratagemList() {
         html += `<div class="category-header">${category.category}</div>`;
 
         category.items.forEach(stratagem => {
+            const stats = stratagemStats[stratagem.name] || { errorRate: 0, correctCount: 0, wrongCount: 0 };
+            const total = stats.correctCount + stats.wrongCount;
+            const errorPercent = total > 0 ? Math.round(stats.errorRate * 100) : 0;
+            const indicatorClass = errorPercent > 50 ? 'high-error' : 
+                                  errorPercent > 25 ? 'medium-error' : 
+                                  total === 0 ? 'no-attempts' : 'low-error';
             html += `
                 <label class="stratagem-checkbox">
                     <input type="checkbox" 
@@ -177,7 +183,11 @@ function createStratagemList() {
                            name="stratagem-${stratagemIndex}"
                            id="stratagem-${stratagemIndex}"
                            ${stratagem.selected ? 'checked' : ''}>
-                    ${stratagem.name} <span class="sequence-code">${stratagem.sequence}</span>
+                    ${stratagem.name} 
+                    <span class="sequence-code">${stratagem.sequence}</span>
+                    <span class="error-indicator ${indicatorClass}" title="${total} attempts">
+                        ${total > 0 ? `${errorPercent}%` : 'new'}
+                    </span>
                 </label>
             `;
             stratagemIndex++;
@@ -217,10 +227,12 @@ function selectRandomStratagem() {
         const daysSinceLastPractice = stats.lastPracticed ? 
             (now - stats.lastPracticed) / (1000 * 60 * 60 * 24) : 7;
         
-        // Higher weight for:
-        // 1. Higher error rates
-        // 2. Stratagems not practiced recently
-        return (stats.errorRate + 0.1) * Math.min(daysSinceLastPractice, 7);
+        // Much higher weight for failed attempts
+        const errorWeight = stats.errorRate > 0 ? stats.errorRate * 5 : 0.1;
+        const timeWeight = Math.min(daysSinceLastPractice, 7) / 7;
+        
+        // Heavily favor ones with errors
+        return errorWeight + timeWeight;
     });
 
     // Weighted random selection
@@ -236,6 +248,13 @@ function selectRandomStratagem() {
     }
 
     stratagemNameDisplay.textContent = currentStratagem.name;
+    
+    // Add success rate display
+    const stats = stratagemStats[currentStratagem.name];
+    const total = stats.correctCount + stats.wrongCount;
+    if (total > 0) {
+        stratagemNameDisplay.textContent += ` (${stats.correctCount} of ${total} attempts)`;
+    }
     
     if (isBlindMode) {
         sequenceDisplay.textContent = '❓'.repeat(currentStratagem.sequence.length/2);
