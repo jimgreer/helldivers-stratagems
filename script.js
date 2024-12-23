@@ -113,6 +113,7 @@ let wrongCount = 0;
 let gamepadConnected = false;
 let gamepadCheckInterval;
 let lastDirection = "";
+let isBlindMode = false;
 
 const sequenceDisplay = document.getElementById("sequence");
 const userInputDisplay = document.getElementById("userInput");
@@ -126,6 +127,7 @@ const selectAllBtn = document.getElementById('selectAll');
 const deselectAllBtn = document.getElementById('deselectAll');
 const gamepadStatusDisplay = document.getElementById("gamepadStatus");
 const reconnectButton = document.getElementById("reconnectController");
+const blindModeCheckbox = document.getElementById("blindMode");
 
 const clickSound = new Audio('sounds/click.mp3');
 clickSound.volume = 1.0; // Changed from 0.3 to 1.0
@@ -178,14 +180,16 @@ function selectRandomStratagem() {
     }
     currentStratagem = selectedStratagems[Math.floor(Math.random() * selectedStratagems.length)];
     
-    // Show sequence briefly
-    sequenceDisplay.textContent = currentStratagem.sequence;
     stratagemNameDisplay.textContent = currentStratagem.name;
     
-    // Hide sequence after 2 seconds
-    setTimeout(() => {
+    if (isBlindMode) {
         sequenceDisplay.textContent = '❓'.repeat(currentStratagem.sequence.length/2);
-    }, 2000);
+    } else {
+        sequenceDisplay.textContent = currentStratagem.sequence;
+        setTimeout(() => {
+            sequenceDisplay.textContent = '❓'.repeat(currentStratagem.sequence.length/2);
+        }, 2000);
+    }
     
     userSequence = "";
     userInputDisplay.textContent = "";
@@ -314,6 +318,7 @@ function saveSelections() {
 
 function loadSelections() {
     const savedSelections = localStorage.getItem('stratagemSelections');
+    const savedBlindMode = localStorage.getItem('blindMode');
     if (savedSelections) {
         const selections = JSON.parse(savedSelections);
         let index = 0;
@@ -323,6 +328,10 @@ function loadSelections() {
                 index++;
             });
         });
+    }
+    if (savedBlindMode !== null) {
+        isBlindMode = savedBlindMode === 'true';
+        blindModeCheckbox.checked = isBlindMode;
     }
 }
 
@@ -389,6 +398,11 @@ function checkInitialGamepadState() {
 
 reconnectButton.addEventListener("click", () => {
     checkInitialGamepadState();
+});
+
+blindModeCheckbox.addEventListener('change', (e) => {
+    isBlindMode = e.target.checked;
+    localStorage.setItem('blindMode', isBlindMode);
 });
 
 loadSelections();
