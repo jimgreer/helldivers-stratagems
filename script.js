@@ -7,7 +7,7 @@ const stratagems = [
             { name: "Eagle Cluster Bomb", sequence: "⬆️➡️⬇️⬇️➡️", selected: true },
             { name: "Eagle Napalm Airstrike", sequence: "⬆️⬇️⬆️", selected: true },
             { name: "Eagle Smoke Strike", sequence: "⬆️⬆️⬇️", selected: true },
-            { name: "Eagle 500kg Bomb", sequence: "⬆️⬇️⬇️⬇️⬇️", selected: true },
+            { name: "Eagle 500kg Bomb", sequence: "⬆️⬇️⬇️⬇️", selected: true },
             { name: "Eagle 110mm Rocket Pods", sequence: "⬆️➡️⬅️➡️", selected: true }
         ]
     },
@@ -20,7 +20,7 @@ const stratagems = [
             { name: "Orbital Walking Barrage", sequence: "➡️⬇️➡️⬇️➡️⬇️", selected: true },
             { name: "Orbital Napalm Barrage", sequence: "➡️➡️⬇️➡️⬆️", selected: true },
             { name: "Orbital Airburst Strike", sequence: "➡️➡️➡️", selected: true },
-            { name: "Orbital Laser", sequence: "➡️⬆️⬆️➡️⬆️", selected: true },
+            { name: "Orbital Laser", sequence: "➡️⬆️⬆️➡️", selected: true },
             { name: "Orbital Railcannon Strike", sequence: "➡️⬆️⬇️⬆️➡️", selected: true },
             { name: "Orbital Precision Strike", sequence: "➡️➡️⬆️", selected: true },
             { name: "Orbital Gas Strike", sequence: "➡️➡️⬇️➡️", selected: true },
@@ -33,7 +33,7 @@ const stratagems = [
         items: [
             { name: "Machine Gun Sentry", sequence: "⬇️⬆️➡️➡️⬆️", selected: true },
             { name: "Gatling Sentry", sequence: "⬇️⬅️➡️⬅️", selected: true },
-            { name: "Autocannon Sentry", sequence: "⬇️⬆️➡️⬆️⬅️⬆️", selected: true },
+            { name: "Autocannon Sentry", sequence: "⬇️⬆️➡️⬆️⬅️", selected: true },
             { name: "Rocket Sentry", sequence: "⬇️⬆️➡️➡️⬅️", selected: true },
             { name: "Flame Sentry", sequence: "⬇️⬆️⬆️⬆️⬆️", selected: true },
             { name: "Mortar Sentry", sequence: "⬇️⬆️➡️⬆️", selected: true },
@@ -54,7 +54,7 @@ const stratagems = [
             { name: "Stalwart", sequence: "⬇️⬅️⬇️⬆️⬆️⬅️", selected: true },
             { name: "Heavy Machine Gun", sequence: "⬇️⬅️⬆️⬇️⬇️", selected: true },
             { name: "Laser Cannon", sequence: "⬇️⬅️⬇️⬆️⬅️", selected: true },
-            { name: "EAT", sequence: "⬇️⬇️⬅️⬆️➡️", selected: true },
+            { name: "EAT-17", sequence: "⬇️⬇️⬅️⬆️➡️", selected: true },
             { name: "Recoilless Rifle", sequence: "⬇️⬅️➡️➡️⬅️", selected: true },
             { name: "Anti-Materiel Rifle", sequence: "⬇️⬅️➡️⬆️⬇️", selected: true },
             { name: "Commando", sequence: "⬇️⬅️⬆️⬇️➡️", selected: true },
@@ -82,7 +82,6 @@ const stratagems = [
             { name: "Supply Pack", sequence: "⬇️⬅️⬇️⬆️⬆️⬇️", selected: true },
             { name: "Jump Pack", sequence: "⬆️⬆️⬇️⬆️⬆️", selected: true },
             { name: "Ballistic Shield", sequence: "⬇️⬇️⬇️⬆️⬆️⬅️", selected: true },
-            { name: "Directional Shield", sequence: "⬆️⬅️⬅️⬅️⬆️⬆️", selected: true },
             { name: "Shield Generator Pack", sequence: "⬆️⬅️⬅️➡️➡️", selected: true },
             { name: "AR-23 Guard Dog", sequence: "⬆️⬆️➡️⬆️⬆️", selected: true },
             { name: "LAS-5 Guard Dog", sequence: "⬆️⬆️➡️➡️", selected: true },
@@ -100,7 +99,7 @@ const stratagems = [
             { name: "Eagle Rearm", sequence: "⬆️⬆️⬅️⬆️➡️", selected: true },
             { name: "Upload Data", sequence: "⬅️➡️⬆️⬆️⬆️", selected: true },
             { name: "Seismic Probe", sequence: "⬆️⬆️⬅️➡️⬇️⬇️", selected: true },
-            { name: "SSSD Delivery", sequence: "⬇️⬇️⬇️⬆️⬆️", selected: true },
+            { name: "SSSD Delivery", sequence: "⬇️⬇️⬇���⬆️⬆️", selected: true },
             { name: "Hellbomb", sequence: "⬇️⬅️⬆️⬇️⬆️➡️⬆️⬆️", selected: true }
         ]
     }
