@@ -15,17 +15,17 @@ const stratagems = [
         category: "Offensive: Orbital",
         items: [
             { name: "Orbital Gatling Barrage", sequence: "➡️⬇️⬅️⬆️⬆️", selected: true },
-            { name: "Orbital 120mm HE Barrage", sequence: "➡️➡️⬇️⬅️➡️⬇️", selected: true },
-            { name: "Orbital 380mm HE Barrage", sequence: "➡️⬆️⬆️⬆️⬅️⬇️⬇️", selected: true },
+            { name: "Orbital 120mm HE Barrage", sequence: "➡️⬇️⬅️⬆️⬆️⬅️", selected: true },
+            { name: "Orbital 380mm HE Barrage", sequence: "➡️⬇️⬅️⬆️⬆️⬅️⬇️⬇️", selected: true },
             { name: "Orbital Walking Barrage", sequence: "➡️⬇️➡️⬇️➡️⬇️", selected: true },
-            { name: "Orbital Napalm Barrage", sequence: "➡️➡️⬇️➡️⬆️", selected: true },
-            { name: "Orbital Airburst Strike", sequence: "➡️➡️➡️", selected: true },
-            { name: "Orbital Laser", sequence: "➡️⬆️⬆️➡️", selected: true },
-            { name: "Orbital Railcannon Strike", sequence: "➡️⬆️⬇️⬆️➡️", selected: true },
-            { name: "Orbital Precision Strike", sequence: "➡️➡️⬆️", selected: true },
-            { name: "Orbital Gas Strike", sequence: "➡️➡️⬇️➡️", selected: true },
-            { name: "Orbital EMS Strike", sequence: "➡️➡️⬅️⬇️", selected: true },
-            { name: "Orbital Smoke Strike", sequence: "➡️➡️⬆️", selected: true }
+            { name: "Orbital Napalm Barrage", sequence: "➡️⬇️⬅️⬆️⬆️", selected: true },
+            { name: "Orbital Airburst Strike", sequence: "➡️⬇️⬅️⬆️⬆️⬅️⬆️⬆️", selected: true },
+            { name: "Orbital Laser", sequence: "➡️⬇️⬅️⬆️⬆️⬅️⬆️⬆️", selected: true },
+            { name: "Orbital Railcannon Strike", sequence: "➡️⬇️⬅️⬆️⬆️⬅️⬆️⬆️", selected: true },
+            { name: "Orbital Precision Strike", sequence: "➡️⬇️⬅️⬆️⬆️⬅️⬆️⬆️", selected: true },
+            { name: "Orbital Gas Strike", sequence: "➡️⬇️⬅️⬆️⬆️⬅️⬆️⬆️", selected: true },
+            { name: "Orbital EMS Strike", sequence: "➡️⬇️⬅️⬆️⬆️⬅️⬆️⬆️", selected: true },
+            { name: "Orbital Smoke Strike", sequence: "➡️⬇️⬅️⬆️⬆️⬅️⬆️⬆️", selected: true }
         ]
     },
     {
@@ -99,7 +99,7 @@ const stratagems = [
             { name: "Eagle Rearm", sequence: "⬆️⬆️⬅️⬆️➡️", selected: true },
             { name: "Upload Data", sequence: "⬅️➡️⬆️⬆️⬆️", selected: true },
             { name: "Seismic Probe", sequence: "⬆️⬆️⬅️➡️⬇️⬇️", selected: true },
-            { name: "SSSD Delivery", sequence: "⬇️⬇️⬇���⬆️⬆️", selected: true },
+            { name: "SSSD Delivery", sequence: "⬇️⬇️⬇️⬆️⬆️", selected: true },
             { name: "Hellbomb", sequence: "⬇️⬅️⬆️⬇️⬆️➡️⬆️⬆️", selected: true }
         ]
     }

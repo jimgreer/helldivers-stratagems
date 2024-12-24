@@ -1,74 +1,82 @@
-Offensive: Eagle ⬆️
+Offensive: Eagle
 Eagle Airstrike - ⬆️➡️⬇️➡️
 Eagle Strafing Run - ⬆️➡️➡️
-Eagle Cluster Bomb - ⬆️➡️⬇️⬇️➡️⬇️
-Eagle Napalm Airstrike - ⬆️➡️⬇️⬆️
-Eagle Smoke Strike - ⬆️➡️⬆️⬇️
-Eagle 500KG Bomb - ⬆️⬅️⬇️⬇️⬇️
-Eagle 110MM Rocket Pods - ⬆️⬇️⬆️⬅️
+Eagle Cluster Bomb - ⬆️➡️⬇️⬇️➡️
+Eagle Napalm Airstrike - ⬆️⬇️⬆️
+Eagle Smoke Strike - ⬆️⬆️⬇️
+Eagle 500kg Bomb - ⬆️⬇️⬇️⬇️
+Eagle 110mm Rocket Pods - ⬆️➡️⬅️➡️
 
-Stratagem Codes: Weapons
-Machine Gun - ⬇️⬅️⬇️⬆️➡️
-Anti-Material Rifle - ⬇️⬅️➡️⬆️⬇️
-Stalwart - ⬇️⬅️⬇️⬆️⬆️⬅️
-Expendable Anti-Tank - ⬇️⬇️⬅️⬆️➡️
-Recoilless Rifle - ⬇️⬅️➡️➡️⬅️
-Flamethrower - ⬇️⬅️⬆️⬇️⬆️
-Autocannon - ⬇️➡️⬅️⬇️⬇️⬆️⬆️➡️
-Railgun - ⬇️➡️⬅️⬇️⬇️⬆️⬅️⬇️➡️
-Spear - ⬇️⬇️⬆️⬇️⬇️
+Offensive: Orbital
+Orbital Gatling Barrage - ➡️⬇️⬅️⬆️⬆️
+Orbital 120mm HE Barrage - ➡️⬇️⬅️⬆️⬆️⬅️
+Orbital 380mm HE Barrage - ➡️⬇️⬅️⬆️⬆️⬅️⬇️⬇️
+Orbital Walking Barrage - ➡️⬇️➡️⬇️➡️⬇️
+Orbital Napalm Barrage - ➡️⬇️⬅️⬆️⬆️
+Orbital Airburst Strike - ➡️⬇️⬅️⬆️⬆️⬅️⬆️⬆️
+Orbital Laser - ➡️⬇️⬅️⬆️⬆️⬅️⬆️⬆️
+Orbital Railcannon Strike - ➡️⬇️⬅️⬆️⬆️⬅️⬆️⬆️
+Orbital Precision Strike - ➡️⬇️⬅️⬆️⬆️⬅️⬆️⬆️
+Orbital Gas Strike - ➡️⬇️⬅️⬆️⬆️⬅️⬆️⬆️
+Orbital EMS Strike - ➡️⬇️⬅️⬆️⬆️⬅️⬆️⬆️
+Orbital Smoke Strike - ➡️⬇️⬅️⬆️⬆️⬅️⬆️⬆️
 
-Stratagem Codes: Orbital
-Gatling Barrage - ➡️⬇️⬅️⬆️⬆️
-Airburst Strike - ➡️➡️➡️
-120MM HE Barrage - ➡️⬇️⬇️⬅️⬇️➡️⬇️⬇️
-380MM HE Barrage - ➡️⬇️⬇️⬆️⬆️⬅️⬇️⬇️⬇️
-Walking Barrage - ➡️⬇️➡️⬇️➡️⬇️
-Laser Strike - ➡️⬆️⬅️⬆️➡️⬅️
-Railcannon Strike - ➡️⬇️⬆️⬇️⬅️
-
-Stratagem Codes: Hangar
-Stratagem Codes: Bridge
-Orbital Precision Strikes - ➡️➡️⬆️
-Orbital Gas Strike - ➡️➡️⬇️➡️
-Orbital EMS Strike - ➡️➡️⬅️⬇️
-Orbital Smoke Strike - ➡️➡️⬇️⬆️
-HMG Emplacement - ⬆️⬇️⬅️➡️➡️⬅️
-Shield Generator Relay - ⬇️⬆️⬅️➡️⬅️⬇️
-Tesla Tower - ⬇️⬆️➡️⬆️⬅️➡️
-
-Strategem: Engineering Bay
-Anti-Personnel Minefield - ⬇️⬅️⬇️⬆️➡️
-Supply Pack - ⬇️⬅️⬇️⬆️⬆️⬇️
-Grenade Launcher - ⬇️⬅️⬇️⬆️⬅️⬇️⬇️
-Laser Cannon - ⬇️⬅️⬇️⬆️⬅️
-Incendiary Mines - ⬇️⬅️⬅️⬇️
-Guard Dog Rover - ⬇️⬅️⬇️⬆️⬅️⬇️⬇️
-Ballistic Shield Backpack - ⬇️⬅️⬆️⬆️➡️
-Arc Thrower - ⬇️➡️⬆️⬅️⬇️
-Shield Generator Pack - ⬇️⬆️⬅️⬇️➡️➡️
-
-Stratagem Codes: Robotics
+Defensive
 Machine Gun Sentry - ⬇️⬆️➡️➡️⬆️
-Gatling Sentry - ⬇️⬆️➡️⬅️⬇️
-Mortar Sentry - ⬇️⬆️➡️➡️⬇️
-Guard Dog - ⬇️⬆️⬅️⬆️➡️⬇️
-Autocannon Sentry - ⬇️⬆️➡️⬆️⬅️⬆️
+Gatling Sentry - ⬇️⬅️➡️⬅️
+Autocannon Sentry - ⬇️⬆️➡️⬆️⬅️
 Rocket Sentry - ⬇️⬆️➡️➡️⬅️
-EMS Mortar Sentry - ⬇️⬇️⬆️⬆️⬅️
+Flame Sentry - ⬇️⬆️⬆️⬆️⬆️
+Mortar Sentry - ⬇️⬆️➡️⬆️
+EMS Mortar Sentry - ⬇️⬆️⬆️
+Anti-Tank Mines - ⬇️⬅️⬆️⬆️
+Incendiary Mines - ⬇️⬅️⬅️⬇️
+Anti-Personnel Mines - ⬇️⬅️➡️⬆️
+Tesla Tower - ⬇️⬆️➡️➡️
+Shield Generator Relay - ⬇️⬇️⬅️➡️➡️
+HMG Emplacement - ⬇️⬆️➡️➡️⬅️
+Anti-Tank Emplacement - ⬇️⬆️➡️➡️➡️
 
-Mission Stratagem Codes:
-Reinforce - ⬆️⬇️➡️⬅️⬆️
-SOS Beacon - ⬆️⬇️➡️⬆️
-Super Earth Flag - ⬇️⬆️⬇️⬆️
-Upload Data - ⬅️➡️⬆️⬆️⬆️
-Hellbomb - ⬇️⬆️⬅️⬇️⬆️➡️⬇️⬆️
+Support Weapons
+MG-43 Machine Gun - ⬇️⬅️⬇️⬆️➡️
+Stalwart - ⬇️⬅️⬇️⬆️⬆️⬅️
+Heavy Machine Gun - ⬇️⬅️⬆️⬇️⬇️
+Laser Cannon - ⬇️⬅️⬇️⬆️⬅️
+EAT-17 - ⬇️⬇️⬅️⬆️➡️
+Recoilless Rifle - ⬇️⬅️➡️➡️⬅️
+Anti-Materiel Rifle - ⬇️⬅️➡️⬆️⬇️
+Commando - ⬇️⬅️⬆️⬇️➡️
+Flamethrower - ⬇️⬅️⬆️⬇️⬆️
+Sterilizer - ⬇️⬅️⬆️⬇️⬅️
+Autocannon - ⬇️⬅️⬇️⬆️⬆️➡️
+Railgun - ⬇️➡️⬇️⬆️⬆️➡️
+Spear - ⬇️⬇️⬆️⬇️⬇️
+Grenade Launcher - ⬇️⬅️⬆️⬅️⬇️
+Quasar Cannon - ⬇️⬇️⬆️⬅️➡️
+Airburst Rocket Launcher - ⬇️⬆️⬆️⬅️➡️
+Arc Thrower - ⬇️➡️⬇️⬆️⬅️⬅️
 
-Backpacks:
+Exosuits
+Patriot Exosuit - ⬅️⬆️➡️⬆️⬆️
+Emancipator Exosuit - ⬅️⬆️➡️⬆️⬆️
+
+Backpacks
 Supply Pack - ⬇️⬅️⬇️⬆️⬆️⬇️
-Jump Pack - ⬇️⬆️⬆️⬇️⬆️
-Ballistic Shield - ⬇️⬅️⬆️⬆️➡️
-Shield Generator Pack - ⬇️⬆️⬅️➡️➡️
-AR-23 Guard Dog - ⬇️⬆️⬆️⬇️⬆️
-LAS-5 Guard Dog - ⬇️⬆️⬆️➡️➡️
-TX-13 Guard Dog - ⬇️⬆️⬆️⬇️
+Jump Pack - ⬆️⬆️⬇️⬆️⬆️
+Ballistic Shield - ⬇️⬇️⬇️⬆️⬆️⬅️
+Shield Generator Pack - ⬆️⬅️⬅️➡️➡️
+AR-23 Guard Dog - ⬆️⬆️➡️⬆️⬆️
+LAS-5 Guard Dog - ⬆️⬆️➡️➡️
+TX-13 Guard Dog - ⬆️⬆️➡️⬆️
+
+Mission
+Reinforce - ⬆️⬇️➡️⬅️⬆️
+SOS Beacon - ⬆️⬇️⬆️
+Resupply - ⬇️⬇️➡️⬆️
+SEAF Artillery - ➡️⬆️⬆️⬇️
+Super Earth Flag - ⬇️⬆️⬇️⬆️
+Eagle Rearm - ⬆️⬆️⬅️⬆️➡️
+Upload Data - ⬅️➡️⬆️⬆️⬆️
+Seismic Probe - ⬆️⬆️⬅️➡️⬇️⬇️
+SSSD Delivery - ⬇️⬇️⬇️⬆️⬆️
+Hellbomb - ⬇️⬅️⬆️⬇️⬆️➡️⬆️⬆️
